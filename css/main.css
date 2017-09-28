@@ -94,7 +94,38 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body{
+  font-family: 'Roboto', sans-serif;
+}
 
+.header {
+  background-color: #292929;
+  height: 70px;
+  line-height: 70px;
+}
+
+.header a{
+  text-decoration: none;
+  color : #ffffff;
+  margin-right: 50px;
+  font-weight: bold;
+}
+
+.header a:hover{
+  color: #FD8814;
+}
+
+.card-header{
+  filter: opacity(0.7);
+  height: 70px;
+  font-size: small;
+  color: #FD8814;
+  line-height: 5px;
+}
+
+footer{
+  background-color: #292929;
+}
 
 
 
