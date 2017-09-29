@@ -35,8 +35,7 @@
     <header class="container-fluid header">
       <div class="container">
         <nav class="menu">
-          <a href="#">HOME</a>
-
+          <a href="../controller/indexCtrl.php">HOME</a>
         </nav>
       </div>
     </header>

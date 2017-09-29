@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once('../model/data.php');
-include('../view/template/header.php');
+// include('../view/template/header.php');
 include('../view/signInView.php');
 
 // register_signIn($identify, $password);
@@ -23,7 +23,7 @@ $password=sha1($pass);
     } else {
       $_SESSION['erreur']["connexion"]="erreur";
       header('Location: signInCtrl.php');
-      echo"recommencez";
+      echo"veuillez vous connecter";
     }
   }
 }

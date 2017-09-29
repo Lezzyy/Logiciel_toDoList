@@ -116,10 +116,10 @@ body{
 }
 
 .card-header{
-  filter: opacity(0.7);
   height: 70px;
   font-size: small;
-  color: #FD8814;
+  background-color: grey;
+  color: #ffffff;
   line-height: 5px;
 }
 
@@ -128,10 +128,23 @@ text-align: center;
 line-height: 30px;
 }
 
+#session h2{
+  color: #FD8814;
+}
+
+#connection {
+  text-align: center;
+  line-height: 30px;
+}
+
 .btn-custom{
-  background-color: #FD8814;
+  background-color: #292929;
   color: #ffffff;
   font-weight: 400;
+}
+
+.btn-custom:hover{
+  background-color: grey;
 }
 
 footer{

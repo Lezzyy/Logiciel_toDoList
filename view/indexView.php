@@ -1,4 +1,4 @@
-<!--project card-->
+<!-- sign out -->
 <?php
 if(isset($_SESSION['identify'])){
   ?>
@@ -12,11 +12,28 @@ if(isset($_SESSION['identify'])){
 }
 else{
   ?>
-<h2 class="text-center">Veuillez-vous connecter</h2>
+  <!-- <div class="container">
+    <form class="" action="../controller/signInCtrl.php" method="post">
+      <h2 class="text-center">Veuillez-vous connecter</h2>
+      <input type="submit" name="" value="sign in">
+    </form>
+</div> -->
 <?php
 }
 ?>
+<!-- end sign out -->
 
+<!-- add new project -->
+<div class="container" id="new_project">
+  <form class="" action="../controller/newProjectCtrl.php" method="post">
+    <input type="submit" name="" value="Add new project">
+  </form>
+</div>
+
+<!-- end add new project -->
+
+
+<!--current project card-->
 <?php
 foreach ($variable as $data) {
  ?>
@@ -39,7 +56,7 @@ foreach ($variable as $data) {
 <?php
 }
  ?>
-<!--end project card-->
+<!--end  current project card-->
 
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
