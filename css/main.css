@@ -123,6 +123,17 @@ body{
   line-height: 5px;
 }
 
+#session{
+text-align: center;
+line-height: 30px;
+}
+
+.btn-custom{
+  background-color: #FD8814;
+  color: #ffffff;
+  font-weight: 400;
+}
+
 footer{
   background-color: #292929;
 }

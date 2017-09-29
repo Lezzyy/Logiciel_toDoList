@@ -1,7 +1,24 @@
 <!--project card-->
 <?php
-foreach ($variable as $data) {
+if(isset($_SESSION['identify'])){
+  ?>
+<div class="container" id="session">
+<form action="../controller/signInCtrl.php" method="POST">
+  <h2 class="text-center"><?php echo 'Bienvenue ' .$_SESSION['identify']; ?></h2>
+  <input type="submit" class="btn btn-custom" value="Sign out">
+</form>
+<hr>
+<?php
+}
+else{
+  ?>
+<h2 class="text-center">Veuillez-vous connecter</h2>
+<?php
+}
+?>
 
+<?php
+foreach ($variable as $data) {
  ?>
 <form class="" action="" method="post">
 <div class="card text-center">

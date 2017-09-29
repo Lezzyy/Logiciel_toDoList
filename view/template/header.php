@@ -36,7 +36,7 @@
       <div class="container">
         <nav class="menu">
           <a href="#">HOME</a>
-          <a href="#">SIGN IN</a>
+
         </nav>
       </div>
     </header>
@@ -46,7 +46,6 @@
     <section class="container-fluid banner">
       <div class="inner-banner">
         <h1 class="text-center"><strong>Gestion de projets</strong></h1>
-        <hr>
       </div>
     </section>
 <!--end banner-->
