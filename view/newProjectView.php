@@ -5,7 +5,7 @@
   <input type="date" name="deadline" value="" placeholder="deadline">
   <h2>Steps</h2>
   <input type="text" name="title" value="" placeholder="title">
-  <input type="text" name="end" value="" placeholder="end">
+  <input type="text" name="DateEnd" value="" placeholder="end">
   <h2>Tasks</h2>
   <input type="text" name="action" value="" placeholder="action">
   <input type="text" name="limit_date" value="" placeholder="limit_date">

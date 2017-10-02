@@ -37,7 +37,7 @@ else{
 <?php
 foreach ($variable as $data) {
  ?>
-<form class="" action="" method="post">
+<!-- <form class="" action="" method="post"> -->
 <div class="card text-center">
   <div class="card-header">
   <p>Catégorie</p>
@@ -52,7 +52,7 @@ foreach ($variable as $data) {
     publishing day
   </div>
 </div>
-</form>
+<!-- </form> -->
 <?php
 }
  ?>
