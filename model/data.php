@@ -31,7 +31,7 @@ $req->execute(array(
 
 function showInfoProject(){
 include('db.php');
-$response=$bdd->query('SELECT * FROM Project ORDER BY id LIMIT 0,20');
+$response=$bdd->query('SELECT * FROM Project ORDER BY deadline LIMIT 0,20');
 return $response->fetchAll();
 }
 
@@ -55,10 +55,45 @@ function maxIdStep(){
   return $data;
 }
 
+function maxIdTask(){
+  include('db.php');
+  $req=$bdd->query('SELECT MAX(id) as task_id FROM task');
+  $data=$req->fetch();
+  return $data;
+}
+
 function sendTask($idStep, $infoTask){
   include('db.php');
   $req=$bdd->prepare('INSERT INTO task SET id_step=?, action=?, limit_date=?');
   $req->execute([$idStep['step_id'], $infoTask['action'], $infoTask['limit_date']]);
 }
+
+function getStepId($getStepId){
+include('db.php');
+  $reponse = $bdd->prepare('SELECT * FROM Project p INNER JOIN step s ON s.id_project = p.id and s.id = ?');
+  $reponse->execute(array($getStepId));
+  return $reponse->fetchAll();
+}
+
+function getTaskId($getTaskId){
+  include('db.php');
+    $reponse = $bdd->prepare('SELECT * FROM step s INNER JOIN task t ON t.id_step = s.id and t.id = ?');
+    $reponse->execute(array($getTaskId));
+    return $reponse->fetchAll();
+}
+
+
+function getInfoProject(){
+  include('db.php');
+   $reponse = $bdd->query('SELECT * FROM Project p INNER JOIN step s ON s.id_project = p.id INNER JOIN task t ON t.id_step=s.id');
+   return $reponse->fetchAll();
+}
+
+// function addInput(){
+// echo '<input type="text" name="" value="" placeholder="action">
+//   <input type="text" name="limit_date" value="" placeholder="limit_date"><br>
+//   <input type="submit" name="" value="envoyer">';
+// }
+
 
 ?>
