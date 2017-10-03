@@ -2,6 +2,6 @@
 session_start();
 include_once('../model/data.php');
 include('../view/template/header.php');
-$variable = getInfoProject();
+$variable = showInfoProject();
 include('../view/indexView.php');
  ?>
